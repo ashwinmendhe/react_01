@@ -1,9 +1,11 @@
-import conf from '../conf/conf.js'
+import conf from '../conf/conf'
 import {Client, Account, ID} from "appwrite"
 
 export class AuthService {
     client = new Client();
     constructor() {
+        // console.log("7...", conf.appwritProjectId, conf.appwriteBucketId, conf.appwriteCollectionId, conf.appwriteUrl);
+        
         this.client
         .setEndpoint(conf.appwriteUrl)
         .setProject(conf.appwritProjectId);
